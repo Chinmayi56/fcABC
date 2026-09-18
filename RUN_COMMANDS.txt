@@ -1,0 +1,46 @@
+FARM-CRAFT FINAL LOCAL RUN COMMANDS
+
+1) MongoDB
+- Install/start MongoDB locally.
+- Database name used by the backend: farmcraft_db
+- Mongo URL: mongodb://127.0.0.1:27017
+
+2) Backend
+Open terminal in Farmcarft-main/backend:
+  python -m venv venv
+  venv\Scripts\activate
+  pip install -r requirements.txt
+  uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Backend:
+  http://127.0.0.1:8000
+Swagger:
+  http://127.0.0.1:8000/docs
+Health:
+  http://127.0.0.1:8000/api/health
+
+Demo admin:
+  email: admin@farmcraft.com
+  password: admin123
+
+Customer:
+  Enter name + 10-digit Indian mobile number.
+  Demo OTP: 1234
+  OTP expires in 5 minutes.
+
+3) Admin frontend
+Open a second terminal in Farmcarft-main/admin:
+  npm install
+  npm run dev -- --host 0.0.0.0 --port 5173
+Open:
+  http://localhost:5173
+
+4) Customer frontend
+Open a third terminal in Farmcarft-main/customer:
+  npm install
+  npm run dev -- --host 0.0.0.0 --port 5174
+Open:
+  http://localhost:5174
+
+IMPORTANT PRODUCT RULE
+Admin product creation does NOT require a price. Leave Price and Discount Price empty to create a Price-on-Request product. The existing Admin and Customer frontend files were not modified for this final backend migration.

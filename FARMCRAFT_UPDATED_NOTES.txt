@@ -1,0 +1,19 @@
+Farm-Craft updated project
+=========================
+
+Implemented:
+- Customer purchase email is optional.
+- Fixed order response validation for nullable product price/unit_price/subtotal, which was causing the customer-side "Something went wrong" after the order and notification were already created.
+- Orders remain persisted in MongoDB and appear in Admin Purchased Products/Orders.
+- Existing Admin order status update flow remains active.
+- Admin company settings support additional mobile numbers.
+- Customer header logo/company-name spacing corrected without changing the logo artwork/colors.
+- Customer/Admin invoices include company/customer/order/product details and handle missing email/price safely.
+- Offers are now persisted in MongoDB with Active/Inactive control, public active-offer API, and purchase-time offer application.
+- Existing API architecture and branding were preserved as much as possible.
+
+Validation:
+- Backend Python source compile check passed.
+- Admin TypeScript project check passed.
+- Customer JavaScript syntax checks passed.
+- Full Vite production builds could not be executed in this environment because the uploaded node_modules lacked native Rollup/Rolldown binaries. Install dependencies fresh with npm install in each frontend before running the production build.
